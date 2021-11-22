@@ -1,5 +1,5 @@
 {
-  "homepage": "robert-sobolewski.github.io/hangmanProject",
+  "homepage": "robert-sobolewski.github.io/hangman1",
   "name": "hangman-game",
   "version": "0.1.0",
   "private": true,
@@ -46,6 +46,7 @@
       "last 1 safari version"
     ]
   },
+  "proxy":"http://localhost:3000",
   "devDependencies": {
     "sass": "^1.43.4"
   }
