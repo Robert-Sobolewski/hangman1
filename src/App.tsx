@@ -1,56 +1,26 @@
 import React from 'react';
 import logo from './logo.svg';
 import { Counter } from './features/counter/Counter';
-import './App.css';
+import "./App.scss";
+import HomeScreen from "./screens/HomeScreen";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import NewScreen from "./screens/NewScreen";
+import GameScreen from "./screens/GameScreen";
+import WinScreen from "./screens/WinScreen";
+import LoseScreen from "./screens/LoseScreen";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={HomeScreen} />
+          <Route exact path="/new" component={NewScreen} />
+          <Route exact path="/game/:category" component={GameScreen} />
+          <Route exact path="/win/:wrong" component={WinScreen} />
+          <Route exact path="/lose" component={LoseScreen} />
+        </Switch>
+      </Router>
     </div>
   );
 }

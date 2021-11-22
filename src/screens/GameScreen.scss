@@ -1,0 +1,173 @@
+
+@keyframes draw1{
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes follow-path {
+    to{
+        motion-offset: 100%;
+        offset-distance: 100%;
+    }
+    
+}
+
+.game-screen{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+
+    h1{
+        text-align: center;
+        margin-bottom: 0.5em;
+
+        strong{
+            color: green;
+        }
+    }
+    hr{
+        margin: 1em 0 1em 0;
+    }
+    .wrapper{
+        display: flex;
+        flex:1;
+        height: 80vh;
+
+
+        .left{
+            padding: 0.5em;
+            flex: 0.6;
+            text-align: center;
+
+            p>strong{
+                color: red;
+            }
+        }
+        .right{
+            padding: 0.5em;
+            flex: 0.4;
+            position: relative;
+            display: flex;
+
+            figure{
+                width: 400px;
+                height: 250px;
+                position: relative;
+                display: flex;
+            }
+
+            .ball{
+                height: 20px;
+                width: 20px;
+                position: absolute;
+                display: block;
+                border-radius: 50%;
+                top: 0;
+                left: 0;
+                background: yellow;
+                box-shadow: inset 2px 2px 3px black;
+                 
+                 offset-path: path("M 52.34375,233.98437 56.640625,11.71875 223.82813,10.9375 l -0.39063,12.5");
+                 motion-path: path("M 52.34375,233.98437 56.640625,11.71875 223.82813,10.9375 l -0.39063,12.5");
+                
+                // animation: follow-path 5s linear;
+                // animation-fill-mode: forwards;
+            }
+            
+            .ball-anim{
+                animation: follow-path 1s linear;
+                animation-fill-mode: forwards;
+            }
+            .ball-path0{
+                offset-path: path("M 52.34375,233.98437 56.640625,11.71875 223.82813,10.9375 l -0.39063,12.5");
+                motion-path: path("M 52.34375,233.98437 56.640625,11.71875 223.82813,10.9375 l -0.39063,12.5");
+            }
+            .ball-path1{
+                @extend .ball;
+                offset-path: path("M 52.34375,233.98437 56.640625,11.71875 223.82813,10.9375 l -0.39063,12.5");
+                motion-path: path("M 52.34375,233.98437 56.640625,11.71875 223.82813,10.9375 l -0.39063,12.5");
+
+            }
+            .ball-path2{
+                @extend .ball;
+                offset-path: path("M 223.68646,23.436203 A 24.447514,25 0 0 1 248.13385,48.354736 24.447514,25 0 0 1 223.8458,73.435672 24.447514,25 0 0 1 199.24012,48.680601 24.447514,25 0 0 1 223.3678,23.438327");
+                motion-path: path("M 223.68646,23.436203 A 24.447514,25 0 0 1 248.13385,48.354736 24.447514,25 0 0 1 223.8458,73.435672 24.447514,25 0 0 1 199.24012,48.680601 24.447514,25 0 0 1 223.3678,23.438327");
+
+            }
+            .ball-path3{
+                @extend .ball;
+                offset-path: path("M 221.48437,73.828125 C 219.14062,173.82812 189.84375,179.6875 189.84375,179.6875");
+                motion-path: path("M 221.48437,73.828125 C 219.14062,173.82812 189.84375,179.6875 189.84375,179.6875");
+
+            }
+            .ball-path4{
+                @extend .ball;
+                offset-path: path("m 191.01562,111.71875 19.14063,-33.984375 11.32812,-3.90625 7.8125,16.015625 -1.5625,36.32813");
+                motion-path: path("m 191.01562,111.71875 19.14063,-33.984375 11.32812,-3.90625 7.8125,16.015625 -1.5625,36.32813");
+
+            }
+            .ball-path5{
+                @extend .ball;
+                offset-path: path("m 173.82812,207.42187 19.53125,-11.32812 -3.51562,-16.40625 -8.98438,12.10937 -25.39062,4.29688");
+                motion-path: path("m 173.82812,207.42187 19.53125,-11.32812 -3.51562,-16.40625 -8.98438,12.10937 -25.39062,4.29688");
+            }
+
+            .draw{
+                height: 250px;
+                width: 400px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            .path-anim{
+                animation: draw1 1s linear ;
+                animation-fill-mode: forwards;
+            }
+            .draw-path1{
+                stroke-dashoffset: 402.0026;
+                stroke-dasharray: 402.0026;
+            }
+            .draw-path2{
+                stroke-dashoffset: 155.05178;
+                stroke-dasharray: 155.05178;
+            }
+            .draw-path3{
+                stroke-dashoffset: 114.65328;
+                stroke-dasharray: 114.65328;
+            }
+            .draw-path4{
+                stroke-dashoffset: 105.1678009;
+                stroke-dasharray: 105.1678009;
+            }
+            .draw-path5{
+                stroke-dashoffset: 80.187332153;
+                stroke-dasharray: 80.187332153;
+            }
+            //end right
+        }
+        
+    }
+    .bottom{
+        padding: 0.5em;
+        flex: 1;
+        height: 15vh;
+        display: flex;
+        
+        .bottom-left{
+            flex:0.5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .bottom-right{
+            flex: 0.5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+    }
+
+}
