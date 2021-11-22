@@ -44,9 +44,12 @@ function GameScreen(props: any) {
     updateGuessing();
     setUserValue("");
     if (wrongAnswer > 4) {
-      props.history.push("/lose");
+      props.history.push("https://robert-sobolewski.github.io/hangman1/lose");
     }
-    if (!answer.includes("_")) props.history.push(`/win/${wrongAnswer}`); //("/win/" + { wrongAnswer });
+    if (!answer.includes("_"))
+      props.history.push(
+        `https://robert-sobolewski.github.io/hangman1/win/${wrongAnswer}`
+      ); //("/win/" + { wrongAnswer });
   }
 
   function updateGuessing(): void {

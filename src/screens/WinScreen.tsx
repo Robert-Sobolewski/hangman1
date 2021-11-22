@@ -23,7 +23,10 @@ function WinScreen(props: any) {
 
       <br />
       <h2>Would you like play again?</h2>
-      <Link className="button" to={"/"}>
+      <Link
+        className="button"
+        to={"https://robert-sobolewski.github.io/hangman1/"}
+      >
         Yes
       </Link>
     </div>

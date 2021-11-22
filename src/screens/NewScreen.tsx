@@ -45,7 +45,9 @@ function NewScreen() {
               className="button"
               key={index}
               to={{
-                pathname: "/game/" + i.category,
+                pathname:
+                  "https://robert-sobolewski.github.io/hangman1/game/" +
+                  i.category,
               }}
               onClick={(e: any) => linkClick(i.category)}
             >

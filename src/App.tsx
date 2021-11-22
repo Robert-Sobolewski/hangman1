@@ -14,11 +14,31 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path="/" component={HomeScreen} />
-          <Route exact path="/new" component={NewScreen} />
-          <Route exact path="/game/:category" component={GameScreen} />
-          <Route exact path="/win/:wrong" component={WinScreen} />
-          <Route exact path="/lose" component={LoseScreen} />
+          <Route
+            exact
+            path="https://robert-sobolewski.github.io/hangman1/"
+            component={HomeScreen}
+          />
+          <Route
+            exact
+            path="https://robert-sobolewski.github.io/hangman1/new"
+            component={NewScreen}
+          />
+          <Route
+            exact
+            path="https://robert-sobolewski.github.io/hangman1/game/:category"
+            component={GameScreen}
+          />
+          <Route
+            exact
+            path="https://robert-sobolewski.github.io/hangman1/win/:wrong"
+            component={WinScreen}
+          />
+          <Route
+            exact
+            path="https://robert-sobolewski.github.io/hangman1/lose"
+            component={LoseScreen}
+          />
         </Switch>
       </Router>
     </div>
