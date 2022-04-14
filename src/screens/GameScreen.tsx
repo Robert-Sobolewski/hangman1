@@ -17,7 +17,7 @@ import {
   selectGuess,
   addGuess,
 } from "../features/manager/managerSlice";
-import { setTimeout } from "timers";
+// import { setTimeout } from "timers";
 //const data = require("../data/data.json");
 require("./GameScreen.scss");
 
@@ -75,9 +75,12 @@ function GameScreen(props: any) {
         wrongAnswer !== 0 ? "ball-anim" : ""
       } ${"anim-start"}`
     );
-    setTimeout(() => {
+    let timer: ReturnType<typeof setTimeout> = setTimeout(() => {
       setBallClasses(` ball-path${wrongAnswer} anim-stop`);
     }, 2000);
+
+    return () => clearTimeout(timer);
+    
   }, [wrongAnswer]);
   // const ball = React.cloneElement(
   //   <div className={` ball-path${wrongAnswer}`}></div>

@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch } from "react-redux";
-import { useAppDispatch, useAppSelector } from "../app/hooks";
+import React, { useEffect } from "react";
+
+import { useAppDispatch } from "../app/hooks";
 import { Link } from "react-router-dom";
 import {
-  selectCategory,
   setCategory,
   setNames,
   shuffleNames,
@@ -13,8 +12,6 @@ const data = require("../data/data.json");
 
 function NewScreen() {
   const dispatch = useAppDispatch();
-  const category = useAppSelector(selectCategory);
-  const [cat, setCat] = useState([]);
 
   useEffect(() => {}, []);
   function render(): any {

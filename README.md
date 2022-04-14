@@ -1,3 +1,21 @@
+# Example Hangman game
+
+Used technologies:
+<ol>
+    <li>html</li>
+    <li>css / scss</li>
+    <li>typescript</li>
+    <li>redux</li>
+    <li>react-router</li>
+</ol>
+This is an implementation example
+"Hangman" game. After choosing one category, (movies, actors, countries), we go to the game. At the top there is a field with a hidden password. You have to guess the hidden password by typing the letters in the field at the bottom. In case of 6 incorrect answers, you lose the game.
+
+
+Good luck
+
+<br/>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts

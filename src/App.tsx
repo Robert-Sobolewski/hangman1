@@ -1,6 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
+
 import "./App.scss";
 import HomeScreen from "./screens/HomeScreen";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
